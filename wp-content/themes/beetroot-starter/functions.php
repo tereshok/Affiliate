@@ -27,6 +27,7 @@ $theme_includes = [
 	'/lib/jetpack.php',                        // Jetpack compatibility file
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/acf_blocks_loader.php',              // ACF Blocks Loader
+	'/lib/acf_options_init.php',              // ACF Options Page
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
 ];
 

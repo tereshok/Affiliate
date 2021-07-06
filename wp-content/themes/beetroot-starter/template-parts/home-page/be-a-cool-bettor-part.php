@@ -1,4 +1,5 @@
 <section>
+<div class="container">
   <h2><?php the_field('bettor_title'); ?></h2>
   <p><?php the_field('bettor_text'); ?></p>
   <div class="row">
@@ -12,4 +13,5 @@
       <?php endwhile; ?>
     <?php endif; ?>
   </div>
+</div>
 </section>

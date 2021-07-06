@@ -1,4 +1,5 @@
 <section>
+<div class="container">
   <h2><?php the_field('information_to_bet_title'); ?></h2>
   <div class="row">
     <?php if( have_rows('information_to_bet_block') ): ?>
@@ -13,4 +14,5 @@
       <?php endwhile; ?>
     <?php endif; ?>
   </div>
+</div>
 </section>

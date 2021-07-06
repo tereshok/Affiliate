@@ -1,4 +1,5 @@
 <section>
+<div class="container">
   <h2><?php the_field('asked_questions_title'); ?></h2>
     <?php if( have_rows('asked_questions_block') ): ?>
     <?php $i=0; ?>
@@ -22,4 +23,5 @@
         <?php $i++ ;?>      
       <?php endwhile; ?>
     <?php endif; ?>
+</div>
 </section>

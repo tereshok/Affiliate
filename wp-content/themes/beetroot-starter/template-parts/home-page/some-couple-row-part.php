@@ -1,4 +1,5 @@
 <section>
+<div class="container">
   <div>
     <h5><?php the_field('heading_title'); ?></h5>
     <p><?php the_field('heading_text'); ?></p>
@@ -14,4 +15,6 @@
         <?php endwhile; ?>
       <?php endif; ?>
   </div>
+</div>
+
 </section>
