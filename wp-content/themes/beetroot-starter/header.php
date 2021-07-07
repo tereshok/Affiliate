@@ -22,15 +22,13 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header__row">
-			<a class="header__brand brand" href="<?php echo esc_url( home_url() ); ?>">
-				<?php if ( get_header_image() ) : ?>
-					<img class="brand__img" src="<?php echo( get_header_image() ); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-					<?php
-				else :
-					bloginfo( 'name' );
-				endif;
-				?>
-			</a><!-- /.brand -->
+			<a href="<?php echo esc_url( home_url() ); ?>">
+				<?php if( get_field('header_logo', 'option') ) : ?>
+					<img src="<?php the_field('header_logo', 'option'); ?>" alt="<?php bloginfo( 'name' ); ?>">
+				<?php else : ?>
+					<?php bloginfo( 'name' ); ?>
+				<?php endif;?>
+			</a>
 
 			<nav class="nav-primary header__nav navbar navbar-expand-lg navbar-light bg-light">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavBar"

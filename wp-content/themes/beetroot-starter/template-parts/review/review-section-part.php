@@ -1,7 +1,8 @@
 <?php
 $query = new WP_Query([ 
   'post_type' => 'site-review',
-  'posts_per_page' => 9,]);
+  'posts_per_page' => 9,
+]);
 if($query->have_posts()) : ?>
 <div class="container">
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -24,8 +25,11 @@ if($query->have_posts()) : ?>
     <div>
       <?php 
       $terms = get_field('site_payment_system');
+      //$terms = get_the_terms( get_the_ID(), 'payment' );
       if( $terms ){ 
         foreach( $terms as $term ){
+          the_field('payment_icon', 'payment_' . $term);
+          
          echo esc_url( get_term_link( $term ) ); 
           }
         }
