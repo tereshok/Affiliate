@@ -271,3 +271,53 @@ if ( ! function_exists( 'asset_path' ) ) {
 
 	}
 }
+
+function ratingIcon() {
+
+	$rating = get_field('site_rating');
+	$bad_rating = get_template_directory_uri() . '../assets/images/awardgrey.png';
+	$good_rating = get_template_directory_uri() . '../assets/images/awardyellow.png';
+	$bad_rating_icon = '<img src="' . $bad_rating . '" class="review_block--rating_img">';
+	$good_rating_icon = '<img src="' . $good_rating . '" class="review_block--rating_img">';
+
+  if ( ($rating == 5) ) {
+    echo $good_rating_icon;
+    echo $good_rating_icon;
+		echo $good_rating_icon;
+		echo $good_rating_icon;
+    echo $good_rating_icon;
+  }
+
+  else if ( ($rating == 4) ) {
+    echo $good_rating_icon;
+		echo $good_rating_icon;
+		echo $good_rating_icon;
+    echo $good_rating_icon;
+    echo $bad_rating_icon;
+  }
+
+  else if ( ($rating == 3) ) {
+    echo $good_rating_icon;
+		echo $good_rating_icon;
+		echo $good_rating_icon;
+    echo $bad_rating_icon;
+		echo $bad_rating_icon;
+  }
+
+  else if ( ($rating == 2) ) {
+    echo $good_rating_icon;
+		echo $good_rating_icon;
+    echo $bad_rating_icon;
+		echo $bad_rating_icon;
+		echo $bad_rating_icon;
+  }
+
+  else if ( ($rating == 1) ) {
+    echo $good_rating_icon;
+		echo $bad_rating_icon;
+		echo $bad_rating_icon;
+		echo $bad_rating_icon;
+		echo $bad_rating_icon;
+  }
+return $rating;
+}

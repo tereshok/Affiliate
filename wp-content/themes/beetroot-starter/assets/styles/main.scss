@@ -5,6 +5,10 @@
 @import "common/global";
 @import "layouts/header";
 @import "layouts/footer";
+//Fonts
+@import "common/fonts";
+//Page template parts
+@import "template-parts/review-section";
 
 /**
  * Import npm dependencies

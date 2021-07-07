@@ -1,5 +1,5 @@
 <section>
-<div class="container">
+<div class="container_custom">
   <h2><?php the_field('bettor_title'); ?></h2>
   <p><?php the_field('bettor_text'); ?></p>
   <div class="row">

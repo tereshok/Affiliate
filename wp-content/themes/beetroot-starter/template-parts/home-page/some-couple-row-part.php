@@ -1,5 +1,5 @@
 <section>
-<div class="container">
+<div class="container_custom">
   <div>
     <h5><?php the_field('heading_title'); ?></h5>
     <p><?php the_field('heading_text'); ?></p>

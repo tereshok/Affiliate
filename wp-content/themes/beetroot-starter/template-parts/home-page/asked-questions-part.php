@@ -1,5 +1,5 @@
 <section>
-<div class="container">
+<div class="container_custom">
   <h2><?php the_field('asked_questions_title'); ?></h2>
     <?php if( have_rows('asked_questions_block') ): ?>
     <?php $i=0; ?>

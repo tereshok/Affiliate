@@ -1,5 +1,5 @@
 <section style="background-image: url('<?php the_field('hero_section_background', 'option'); ?>');">
-  <div class="container">
+  <div class="container_custom">
     <div>
       <div><?php the_field('hero_title', 'option'); ?></div>
       <div><?php the_field('hero_text', 'option'); ?></div>

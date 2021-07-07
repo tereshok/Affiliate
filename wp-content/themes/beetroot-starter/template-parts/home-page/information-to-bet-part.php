@@ -1,5 +1,5 @@
 <section>
-<div class="container">
+<div class="container_custom">
   <h2><?php the_field('information_to_bet_title'); ?></h2>
   <div class="row">
     <?php if( have_rows('information_to_bet_block') ): ?>
