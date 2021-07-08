@@ -20,7 +20,7 @@ $slider = get_field('slider');
 ?>
 
 <?php if(get_field('slider')) : ?>
-<section id="<?php echo $block_id; ?>" class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>">
+<section id="<?php echo $block_id; ?>" class="block_slider <?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>">
 	<div id="carouselControls" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
 		<div class="carousel-inner">
 		<?php $active_slide = 0; ?>

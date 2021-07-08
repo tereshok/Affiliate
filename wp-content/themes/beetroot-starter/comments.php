@@ -1,90 +1,69 @@
 <?php
 /**
- * The template for displaying comments.
+ * @package WordPress
+ * @subpackage Theme_Compat
+ * @deprecated 3.0.0
  *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- * @package Beetroot
+ * This file is here for backward compatibility with old themes and will be removed in a future version
  */
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
+// Do not delete these lines.
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' === basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+	die( 'Please do not load this page directly. Thanks!' );
+}
+
+if ( post_password_required() ) { ?>
+		<p class="nocomments"><?php _e( 'This post is password protected. Enter the password to view comments.' ); ?></p>
+	<?php
 	return;
 }
 ?>
 
-<div id="comments" class="comments-area">
+<!-- You can start editing here. -->
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-				/* translators: for comments title */
-				printf( // WPCS: XSS OK.
-					// phpcs:ignore
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wp_dev' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			?>
-		</h2>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp_dev' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wp_dev' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wp_dev' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments(
-					array(
-						'style'      => 'ol',
-						'short_ping' => true,
-					)
-				);
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp_dev' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wp_dev' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wp_dev' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
-			<?php
-		endif; // Check for comment navigation.
-
-	endif; // Check for have_comments().
-
-
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-		?>
-
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp_dev' ); ?></p>
+<?php if ( have_comments() ) : ?>
+	<h3 id="comments">
 		<?php
-	endif;
+		if ( 1 == get_comments_number() ) {
+			printf(
+				/* translators: %s: Post title. */
+				__( 'One response to %s' ),
+				'&#8220;' . get_the_title() . '&#8221;'
+			);
+		} else {
+			printf(
+				/* translators: 1: Number of comments, 2: Post title. */
+				_n( '%1$s response to %2$s', '%1$s responses to %2$s', get_comments_number() ),
+				number_format_i18n( get_comments_number() ),
+				'&#8220;' . get_the_title() . '&#8221;'
+			);
+		}
+		?>
+	</h3>
 
-	comment_form();
-	?>
+	<div class="navigation">
+		<div class="alignleft"><?php previous_comments_link(); ?></div>
+		<div class="alignright"><?php next_comments_link(); ?></div>
+	</div>
 
-</div><!-- #comments -->
+	<ol class="commentlist">
+	<?php wp_list_comments(); ?>
+	</ol>
+
+	<div class="navigation">
+		<div class="alignleft"><?php previous_comments_link(); ?></div>
+		<div class="alignright"><?php next_comments_link(); ?></div>
+	</div>
+<?php else : // This is displayed if there are no comments so far. ?>
+
+	<?php if ( comments_open() ) : ?>
+		<!-- If comments are open, but there are no comments. -->
+
+	<?php else : // Comments are closed. ?>
+		<!-- If comments are closed. -->
+		<p class="nocomments"><?php _e( 'Comments are closed.' ); ?></p>
+
+	<?php endif; ?>
+<?php endif; ?>
+
+<?php comment_form(); ?>

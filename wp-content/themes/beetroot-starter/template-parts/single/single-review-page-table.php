@@ -15,12 +15,12 @@
     <div class="single_info--table_line">
       <div>
         <img src="<?php echo get_template_directory_uri();?>/assets/images/bonusblack.png" class="single_info--table_icon">
-        <span class="single_info--table_title"><?php _e('Bonus', 'affiliate'); ?> ></span>
+        <span class="single_info--table_title"><?php _e('Bonus', 'affiliate'); ?></span>
       </div>
       <div>
         <a href="<?php the_field('affiliate_link'); ?>" class="single_info--affiliate_link">
           <img src="<?php echo get_template_directory_uri();?>/assets/images/bonuswhite.png" class="single_info--bonus_icon">
-          <span class="single_info--bonus"><?php the_field('main_site_bonus'); ?></span>
+          <span class="single_info--bonus"><?php the_field('main_site_bonus'); ?> ></span>
         </a>
       </div>
     </div>
