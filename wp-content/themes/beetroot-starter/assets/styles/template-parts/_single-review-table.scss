@@ -1,0 +1,76 @@
+@import '../common/variables';
+
+.single_info--table {
+  padding: 60px 0;
+}
+
+.single_info--table_line {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid $main_colorGrey;
+
+  .single_info--web_link,
+  .single_info--bonus,
+  .single_info--licence,
+  .single_info--minimum_deposit,
+  .single_info--minimum_serve {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .single_info--table_icon {
+    padding: 0 10px 0 0;
+  }
+
+  .single_info--table_title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .single_info--web_link {
+    color: $main_colorGreen;
+    font-weight: 500;
+  }
+
+  .single_info--affiliate_link {
+    background: #ff8f28;
+    padding: 6px;
+    border-radius: 4px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .single_info--bonus_icon {
+      margin-top: -5px;
+    }
+
+    .single_info--bonus {
+      color: $general_colorWhite;
+      font-weight: 500;
+    }
+  }
+
+  .single_info--collapse {
+    position: relative;
+
+    .single_info--collapse_text {
+      position: absolute;
+      z-index: 9;
+      right: 0;
+      top: 27px;
+      background-color: $main_colorGrey;
+      padding: 3px 7px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.table-remnant_indicator {
+  display: inline;
+  background-color: $main_colorGrey;
+  padding: 2px 10px;
+  border-radius: 30px;
+}

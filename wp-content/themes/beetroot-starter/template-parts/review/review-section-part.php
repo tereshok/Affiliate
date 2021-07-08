@@ -53,15 +53,12 @@ if($query->have_posts()) : ?>
           $terms_count = count($terms);
           $terms_iteration = 0;
         ?>
-
         <?php if( $terms ) : ?>
         <?php foreach( $terms as $term ) : ?>
           <?php $terms_iteration++; ?>
           <?php if($terms_iteration >= 6){
             $terms_remnant = $terms_count - $terms_iteration;
-              if($terms_remnant == 0){
-                echo '';
-              } else {
+              if($terms_remnant != 0){
                 $terms_remnant_indicator = '<p class="remnant_indicator">' . '+' . $terms_remnant . '</p>';  
                 echo $terms_remnant_indicator;
               }
@@ -86,6 +83,7 @@ if($query->have_posts()) : ?>
       </div>
     </div>
 <?php endwhile; ?>
+<a href="<?php echo get_post_type_archive_link('site-review'); ?>"><p><?php _e('VIEW ALL >', 'affiliate'); ?></p></a>
 </div>
 <?php endif; 
 wp_reset_query();

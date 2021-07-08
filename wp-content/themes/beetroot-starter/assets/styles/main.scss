@@ -9,6 +9,9 @@
 @import "common/fonts";
 //Page template parts
 @import "template-parts/review-section";
+@import "template-parts/single-review-table";
+//Pages
+@import "pages/single-review-page";
 
 /**
  * Import npm dependencies
