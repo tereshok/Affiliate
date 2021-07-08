@@ -23,5 +23,23 @@ function beetroot_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar([
+    'name'          => 'First footer widget',
+    'id'            => 'widget-footer-first',
+    'description'   => 'Show first footer widget',
+  ]);
+
+  register_sidebar([
+    'name'          => 'Second footer widget',
+    'id'            => 'widget-footer-second',
+    'description'   => 'Show second footer widget',
+  ]);
+
+  register_sidebar([
+    'name'          => 'Third footer widget',
+    'id'            => 'widget-footer-third',
+    'description'   => 'Show third footer widget',
+  ]);
 }
 add_action( 'widgets_init', 'beetroot_widgets_init' );

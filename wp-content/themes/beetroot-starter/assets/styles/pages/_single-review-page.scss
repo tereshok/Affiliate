@@ -4,6 +4,10 @@ body {
   background-color: $main_colorGrey;
 }
 
+.single_site--body {
+  padding: 65px 0 120px 0;
+}
+
 .single_site--content {
   font-family: 'Roboto', sans-serif;
   background-color: $general_colorWhite;
@@ -11,6 +15,7 @@ body {
   padding: 20px 115px 60px;
 
   .single_site--promo {
+    font-family: 'Roboto Condensed', sans-serif;
     height: 244px;
     background-color: #32363f;
     display: flex;
@@ -19,11 +24,17 @@ body {
     padding: 34px 32px;
   }
 
+  .single_site--promo_div {
+    position: relative;
+  }
+
   .single_site--promo-title {
     font-size: 32px;
     font-weight: 700;
     color: $general_colorWhite;
     max-width: 361px;
+    position: inherit;
+    z-index: 2;
   }
 
   .single_site--promo-block {
@@ -33,13 +44,28 @@ body {
     border-radius: 6px;
   }
 
+  .single_site--promo_link {
+    position: absolute;
+    top: 90px;
+    background-color: $main_colorGreen;
+    color: $general_colorWhite;
+    font-weight: 700;
+    padding: 13px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .single_site--promo-block_img {
     padding: 0 0 25px 0;
   }
 
   .single_site--rating_p,
   .single_site--compare_p {
-    display: inline-flex;
+    display: inline;
   }
 
   .single_site--rating {
@@ -55,4 +81,38 @@ body {
 
 .block_slider {
   padding: 40px 0;
+}
+
+.single_site--sidebar_block {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $general_colorWhite;
+  box-shadow: 0 16px 40px #d8d8dc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px 32px 32px 32px;
+
+  .single_site--bonus {
+    text-align: start;
+    margin: 20px 0;
+
+    .single_site--bonus_p {
+      display: inline;
+    }
+  }
+
+  .single_site--sidebar_link {
+    background-color: $main_colorGreen;
+    color: $general_colorWhite;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 4px;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

@@ -1,0 +1,26 @@
+@import '../common/variables';
+
+.bettor_block {
+  padding: 120px 0;
+}
+
+.bettor_title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.bettor_title-green {
+  color: $main_colorGreen;
+}
+
+.bettor_text,
+.block_better_title,
+.block_better_text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.block_better_title {
+  font-weight: 700;
+}

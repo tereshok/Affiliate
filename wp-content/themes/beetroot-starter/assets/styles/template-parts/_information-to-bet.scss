@@ -1,0 +1,27 @@
+@import '../common/variables';
+
+.information_to_bet_title {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $general_colorBlack;
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 325px;
+  padding: 0 0 45px 0;
+}
+
+.bet_sub_title-icon {
+  margin: -7px 0 0 0;
+}
+
+.bet_sub_title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.bet_sub_text {
+  font-family: 'Roboto', sans-serif;
+  color: $general_colorBlack;
+}

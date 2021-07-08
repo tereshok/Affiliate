@@ -4,7 +4,7 @@ $query = new WP_Query([
   'posts_per_page' => 9,
 ]);
 if($query->have_posts()) : ?>
-<div class="container_custom">
+<div class="container_custom review_section">
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <div class="review_block">
       <div class="review_block--image">

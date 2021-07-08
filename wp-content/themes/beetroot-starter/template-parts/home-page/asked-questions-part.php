@@ -1,10 +1,12 @@
 <section>
 <div class="container_custom">
-  <h2><?php the_field('asked_questions_title'); ?></h2>
+  <?php if(get_field('asked_questions_title')) : ?>
+    <h2 class="asked_questions_title"><?php the_field('asked_questions_title'); ?></h2>
+  <?php endif; ?>
     <?php if( have_rows('asked_questions_block') ): ?>
     <?php $i=0; ?>
       <?php while( have_rows('asked_questions_block') ) : the_row(); ?>
-        <div class="accordion" id="accordion">
+        <div class="accordion asked_questions-accordion" id="accordion">
           <div class="card">
             <div class="card-header" id="heading<?php echo $i; ?>">
               <h2 class="mb-0">

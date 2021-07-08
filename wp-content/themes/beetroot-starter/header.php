@@ -30,7 +30,7 @@
 				<?php endif;?>
 			</a>
 
-			<nav class="nav-primary header__nav navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="nav-primary header__nav navbar navbar-expand-lg navbar-light">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavBar"
 						aria-controls="primaryNavBar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>

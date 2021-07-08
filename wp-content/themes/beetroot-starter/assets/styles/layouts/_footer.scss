@@ -1,0 +1,12 @@
+@import '../common/variables';
+
+.site-footer {
+  height: 420px;
+}
+
+.footer_text {
+  font-family: 'Roboto', sans-serif;
+  color: $general_colorWhite;
+  font-size: 12px;
+  max-width: 355px;
+}
