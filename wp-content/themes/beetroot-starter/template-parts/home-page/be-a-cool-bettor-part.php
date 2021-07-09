@@ -1,4 +1,4 @@
-<section>
+<section class="bettor_section">
 <div class="container_custom bettor_block">
   <?php if(get_field('bettor_title')) : ?>
     <h2 class="bettor_title"><?php the_field('bettor_title'); ?></h2>

@@ -1,4 +1,4 @@
-<section>
+<section class="asked_questions-section">
 <div class="container_custom">
   <?php if(get_field('asked_questions_title')) : ?>
     <h2 class="asked_questions_title"><?php the_field('asked_questions_title'); ?></h2>

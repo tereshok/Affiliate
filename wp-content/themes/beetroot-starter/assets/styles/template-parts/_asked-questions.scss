@@ -1,5 +1,10 @@
 @import '../common/variables';
 
+.asked_questions-section {
+  background-color: $general_colorWhite;
+  padding: 120px 0;
+}
+
 .asked_questions_title {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 48px;

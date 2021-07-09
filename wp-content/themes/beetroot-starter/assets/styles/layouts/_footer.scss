@@ -1,7 +1,17 @@
 @import '../common/variables';
 
 .site-footer {
-  height: 420px;
+  font-family: 'Roboto Condensed', sans-serif;
+  min-height: 420px;
+  padding: 80px 0 40px 0;
+
+  .row {
+    justify-content: flex-end;
+  }
+}
+
+.footer_logo {
+  padding: 0 0 20px 0;
 }
 
 .footer_text {
@@ -9,4 +19,62 @@
   color: $general_colorWhite;
   font-size: 12px;
   max-width: 355px;
+}
+
+.widget,
+.menu-item {
+  list-style: none;
+}
+
+#menu-footer-menu-first,
+#menu-footer-menu-second {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 10px 0;
+
+  a {
+    color: $general_colorWhite;
+  }
+}
+
+.contact-item {
+  padding: 10px 0;
+
+  .contact-link {
+    color: $general_colorWhite;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $general_colorWhite;
+    }
+  }
+}
+
+.widgettitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: $general_colorWhite;
+  text-transform: uppercase;
+}
+
+.footer_copy-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#footer-menu-main {
+  display: flex;
+  margin: 0;
+
+  li {
+    padding: 10px 15px;
+  }
+}
+
+.footer_copyrigh_text {
+  color: $general_colorWhite;
 }

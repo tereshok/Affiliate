@@ -1,10 +1,10 @@
-<section>
+<section class="heading_section">
 <div class="container_custom">
   <div class="heading_title-block">
     <h5 class="heading_title"><?php the_field('heading_title'); ?></h5>
     <p class="heading_text"><?php the_field('heading_text'); ?></p>
   </div>
-  <div class="row">
+  <div class="row heading_row">
     <?php if( have_rows('heading_block') ): ?>
         <?php while( have_rows('heading_block') ) : the_row(); ?>
           <div class="col-6 block_heading">

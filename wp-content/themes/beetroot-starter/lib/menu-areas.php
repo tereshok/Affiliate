@@ -17,7 +17,9 @@ function register_theme_menus() {
 	register_nav_menus(
 		array(
 			'primary'     => __( 'Primary Menu', 'wp_dev' ),
-			'footer_menu' => __( 'Footer Menu', 'wp_dev' ),
+			'footer_menu_main' => __( 'Footer Menu main', 'wp_dev' ),
+			'footer_menu_first' => __( 'Footer Menu first', 'wp_dev' ),
+			'footer_menu_secong' => __( 'Footer Menu second ', 'wp_dev' ),
 		)
 	);
 }

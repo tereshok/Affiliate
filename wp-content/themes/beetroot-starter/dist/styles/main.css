@@ -20226,16 +20226,123 @@ a.text-dark:focus {
 /* line 3, assets/styles/layouts/_footer.scss */
 
 .site-footer {
-  height: 420px;
+  font-family: 'Roboto Condensed', sans-serif;
+  min-height: 420px;
+  padding: 80px 0 40px 0;
 }
 
-/* line 7, assets/styles/layouts/_footer.scss */
+/* line 8, assets/styles/layouts/_footer.scss */
+
+.site-footer .row {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 13, assets/styles/layouts/_footer.scss */
+
+.footer_logo {
+  padding: 0 0 20px 0;
+}
+
+/* line 17, assets/styles/layouts/_footer.scss */
 
 .footer_text {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 12px;
   max-width: 355px;
+}
+
+/* line 24, assets/styles/layouts/_footer.scss */
+
+.widget,
+.menu-item {
+  list-style: none;
+}
+
+/* line 29, assets/styles/layouts/_footer.scss */
+
+#menu-footer-menu-first,
+#menu-footer-menu-second {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 35, assets/styles/layouts/_footer.scss */
+
+.menu-item {
+  padding: 10px 0;
+}
+
+/* line 38, assets/styles/layouts/_footer.scss */
+
+.menu-item a {
+  color: #fff;
+}
+
+/* line 43, assets/styles/layouts/_footer.scss */
+
+.contact-item {
+  padding: 10px 0;
+}
+
+/* line 46, assets/styles/layouts/_footer.scss */
+
+.contact-item .contact-link {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 50, assets/styles/layouts/_footer.scss */
+
+.contact-item .contact-link:hover {
+  color: #fff;
+}
+
+/* line 56, assets/styles/layouts/_footer.scss */
+
+.widgettitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 63, assets/styles/layouts/_footer.scss */
+
+.footer_copy-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* line 69, assets/styles/layouts/_footer.scss */
+
+#footer-menu-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+/* line 73, assets/styles/layouts/_footer.scss */
+
+#footer-menu-main li {
+  padding: 10px 15px;
+}
+
+/* line 78, assets/styles/layouts/_footer.scss */
+
+.footer_copyrigh_text {
+  color: #fff;
 }
 
 /** Import Bootstrap functions */
@@ -20662,6 +20769,13 @@ a.text-dark:focus {
 
 /* line 3, assets/styles/template-parts/_information-to-bet.scss */
 
+.information_to_bet-section {
+  background-color: #fff;
+  padding: 120px 0;
+}
+
+/* line 8, assets/styles/template-parts/_information-to-bet.scss */
+
 .information_to_bet_title {
   font-family: 'Roboto Condensed', sans-serif;
   color: #1d2129;
@@ -20671,13 +20785,13 @@ a.text-dark:focus {
   padding: 0 0 45px 0;
 }
 
-/* line 12, assets/styles/template-parts/_information-to-bet.scss */
+/* line 17, assets/styles/template-parts/_information-to-bet.scss */
 
 .bet_sub_title-icon {
   margin: -7px 0 0 0;
 }
 
-/* line 16, assets/styles/template-parts/_information-to-bet.scss */
+/* line 21, assets/styles/template-parts/_information-to-bet.scss */
 
 .bet_sub_title {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20687,7 +20801,7 @@ a.text-dark:focus {
   display: inline;
 }
 
-/* line 24, assets/styles/template-parts/_information-to-bet.scss */
+/* line 29, assets/styles/template-parts/_information-to-bet.scss */
 
 .bet_sub_text {
   font-family: 'Roboto', sans-serif;
@@ -20700,11 +20814,17 @@ a.text-dark:focus {
 
 /* line 3, assets/styles/template-parts/_be-a-cool-bettor.scss */
 
+.bettor_section {
+  background-color: #fff;
+}
+
+/* line 7, assets/styles/template-parts/_be-a-cool-bettor.scss */
+
 .bettor_block {
   padding: 120px 0;
 }
 
-/* line 7, assets/styles/template-parts/_be-a-cool-bettor.scss */
+/* line 11, assets/styles/template-parts/_be-a-cool-bettor.scss */
 
 .bettor_title {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20712,13 +20832,13 @@ a.text-dark:focus {
   font-size: 48px;
 }
 
-/* line 13, assets/styles/template-parts/_be-a-cool-bettor.scss */
+/* line 17, assets/styles/template-parts/_be-a-cool-bettor.scss */
 
 .bettor_title-green {
   color: #17c37b;
 }
 
-/* line 17, assets/styles/template-parts/_be-a-cool-bettor.scss */
+/* line 21, assets/styles/template-parts/_be-a-cool-bettor.scss */
 
 .bettor_text,
 .block_better_title,
@@ -20727,7 +20847,7 @@ a.text-dark:focus {
   font-size: 18px;
 }
 
-/* line 24, assets/styles/template-parts/_be-a-cool-bettor.scss */
+/* line 28, assets/styles/template-parts/_be-a-cool-bettor.scss */
 
 .block_better_title {
   font-weight: 700;
@@ -20739,6 +20859,12 @@ a.text-dark:focus {
 
 /* line 3, assets/styles/template-parts/_some-couple-row.scss */
 
+.heading_section {
+  padding: 120px 0;
+}
+
+/* line 7, assets/styles/template-parts/_some-couple-row.scss */
+
 .heading_title {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 48px;
@@ -20746,20 +20872,20 @@ a.text-dark:focus {
   max-width: 335px;
 }
 
-/* line 10, assets/styles/template-parts/_some-couple-row.scss */
+/* line 14, assets/styles/template-parts/_some-couple-row.scss */
 
 .heading_title-green {
   color: #17c37b;
 }
 
-/* line 14, assets/styles/template-parts/_some-couple-row.scss */
+/* line 18, assets/styles/template-parts/_some-couple-row.scss */
 
 .heading_title-block {
   margin: 0 0 0 -15px;
   padding: 0 0 45px 0;
 }
 
-/* line 19, assets/styles/template-parts/_some-couple-row.scss */
+/* line 23, assets/styles/template-parts/_some-couple-row.scss */
 
 .heading_text,
 .block_heading_title,
@@ -20768,19 +20894,28 @@ a.text-dark:focus {
   font-size: 18px;
 }
 
-/* line 26, assets/styles/template-parts/_some-couple-row.scss */
+/* line 30, assets/styles/template-parts/_some-couple-row.scss */
 
 .block_heading_title {
   font-weight: 700;
 }
 
-/* line 30, assets/styles/template-parts/_some-couple-row.scss */
+/* line 34, assets/styles/template-parts/_some-couple-row.scss */
 
 .block_heading {
   padding: 0 0 45px 0;
+  max-width: 567px;
 }
 
-/* line 34, assets/styles/template-parts/_some-couple-row.scss */
+/* line 39, assets/styles/template-parts/_some-couple-row.scss */
+
+.heading_row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 43, assets/styles/template-parts/_some-couple-row.scss */
 
 .block_heading_link {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20788,7 +20923,7 @@ a.text-dark:focus {
   font-weight: 700;
 }
 
-/* line 39, assets/styles/template-parts/_some-couple-row.scss */
+/* line 48, assets/styles/template-parts/_some-couple-row.scss */
 
 .block_heading_link:hover {
   text-decoration: none;
@@ -20800,6 +20935,13 @@ a.text-dark:focus {
 
 /* line 3, assets/styles/template-parts/_asked-questions.scss */
 
+.asked_questions-section {
+  background-color: #fff;
+  padding: 120px 0;
+}
+
+/* line 8, assets/styles/template-parts/_asked-questions.scss */
+
 .asked_questions_title {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 48px;
@@ -20807,7 +20949,7 @@ a.text-dark:focus {
   text-align: center;
 }
 
-/* line 10, assets/styles/template-parts/_asked-questions.scss */
+/* line 15, assets/styles/template-parts/_asked-questions.scss */
 
 .asked_questions-accordion {
   max-width: 566px;
